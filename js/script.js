@@ -191,3 +191,21 @@ console.log("%cSABILU TAUBAH ESPORT",
 
 console.log("%cWebsite Ready 🚀",
 "color:#00ff99;font-size:16px;");
+
+/* ==========================
+LOADING SCREEN
+========================== */
+
+window.addEventListener("load",()=>{
+
+const loader=document.getElementById("loader");
+
+setTimeout(()=>{
+
+loader.style.opacity="0";
+
+loader.style.visibility="hidden";
+
+},2500);
+
+});
