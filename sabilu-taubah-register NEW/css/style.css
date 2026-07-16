@@ -1,0 +1,1189 @@
+/* ===========================================
+   SABILU TAUBAH ESPORT
+   PREMIUM UI
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#020817;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* ==========================
+   BACKGROUND
+========================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("../assets/stebackground.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    z-index:-3;
+
+}
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    rgba(0,10,30,.85),
+
+    rgba(0,20,60,.88)
+
+    );
+
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:90px;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(0,0,0,.30);
+
+    border-bottom:1px solid rgba(0,170,255,.25);
+
+}
+
+/* ==========================
+LOGO
+========================== */
+
+.logo img{
+
+    width:75px;
+
+    transition:.35s;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================
+MENU
+========================== */
+
+nav{
+
+    display:flex;
+
+    gap:32px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    text-transform:uppercase;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#25b8ff;
+
+}
+
+/* ==========================
+BUTTON
+========================== */
+
+.btn-daftar{
+
+    background:#0d6efd;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+    box-shadow:0 0 25px rgba(0,120,255,.45);
+
+}
+
+.btn-daftar:hover{
+
+    background:#25b8ff;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================
+HERO
+========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    padding-top:120px;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+.hero-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+/* ==========================
+CENTER
+========================== */
+
+.hero-center{
+
+    text-align:center;
+
+}
+
+.hero-logo{
+
+    width:220px;
+
+    margin-bottom:20px;
+
+    filter:drop-shadow(0 0 25px #00bfff);
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+.hero-center h1{
+
+    font-size:74px;
+
+    font-family:'Orbitron',sans-serif;
+
+    line-height:1.1;
+
+    margin-bottom:10px;
+
+}
+
+.hero-center span{
+
+    display:block;
+
+    color:#27b9ff;
+
+    font-size:48px;
+
+}
+
+.hero-center h3{
+
+    margin-top:15px;
+
+    font-size:28px;
+
+    color:#cfe7ff;
+
+}
+
+.hero-center p{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    color:#d7e9ff;
+
+}
+
+/* ==========================
+BUTTON HERO
+========================== */
+
+.hero-button{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    padding:20px 35px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    min-width:280px;
+
+}
+
+.blue{
+
+    background:#0078ff;
+
+    color:white;
+
+}
+
+.dark{
+
+    background:#081e45;
+
+    border:1px solid #1fbfff;
+
+    color:white;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 25px #00bfff;
+
+}
+
+/* ==========================
+SIDE INFO
+========================== */
+
+.hero-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.info-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:rgba(0,20,50,.65);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(0,170,255,.30);
+
+}
+
+.info-box i{
+
+    font-size:34px;
+
+    color:#31b8ff;
+
+}
+
+.info-box h4{
+
+    margin-bottom:6px;
+
+    font-size:18px;
+
+}
+
+.info-box p{
+
+    color:#d8e8ff;
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:1000px){
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-info{
+
+margin-top:40px;
+
+}
+
+.hero-center h1{
+
+font-size:52px;
+
+}
+
+.hero-center span{
+
+font-size:34px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.btn-daftar{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-logo{
+
+width:150px;
+
+}
+
+.hero-center h1{
+
+font-size:38px;
+
+}
+
+.hero-center span{
+
+font-size:26px;
+
+}
+
+.hero-center h3{
+
+font-size:20px;
+
+}
+
+.hero-button{
+
+flex-direction:column;
+
+}
+
+.btn{
+
+width:100%;
+
+min-width:0;
+
+}
+
+}/* ==========================================
+   COUNTDOWN
+========================================== */
+
+.countdown{
+
+    padding:70px 0;
+
+}
+
+.countdown .container{
+
+    background:rgba(5,18,45,.75);
+
+    border:1px solid rgba(0,170,255,.25);
+
+    border-radius:20px;
+
+    backdrop-filter:blur(20px);
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.countdown h2{
+
+    font-family:'Orbitron',sans-serif;
+
+    color:#35c5ff;
+
+    margin-bottom:25px;
+
+    letter-spacing:2px;
+
+}
+
+#timer{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.time-box{
+
+    width:150px;
+
+    padding:25px;
+
+    background:rgba(0,0,0,.35);
+
+    border:1px solid rgba(0,170,255,.25);
+
+    border-radius:15px;
+
+}
+
+.time-box h1{
+
+    font-size:52px;
+
+    color:#35c5ff;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.time-box p{
+
+    margin-top:8px;
+
+    color:#ddd;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================
+   PRIZE POOL
+========================================== */
+
+.prize{
+
+    padding:60px 0;
+
+}
+
+.prize-box{
+
+    background:linear-gradient(135deg,#021328,#062e68);
+
+    border:2px solid #1dbdff;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    padding:50px;
+
+    box-shadow:0 0 35px rgba(0,170,255,.25);
+
+}
+
+.prize-box h2{
+
+    color:#dbefff;
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
+}
+
+.prize-box h1{
+
+    font-size:72px;
+
+    color:#ffc94d;
+
+    font-family:'Orbitron',sans-serif;
+
+    text-shadow:0 0 20px rgba(255,196,0,.45);
+
+}
+
+.prize-box p{
+
+    margin-top:15px;
+
+    color:#d5e9ff;
+
+}
+
+/* ==========================================
+   INFO TOURNAMENT
+========================================== */
+
+.information{
+
+    padding:70px 0;
+
+}
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:rgba(4,18,45,.75);
+
+    border:1px solid rgba(0,170,255,.20);
+
+    border-radius:20px;
+
+    backdrop-filter:blur(20px);
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px rgba(0,180,255,.35);
+
+}
+
+.card i{
+
+    font-size:45px;
+
+    color:#32b9ff;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    margin-bottom:10px;
+
+    color:#fff;
+
+}
+
+.card p{
+
+    color:#dbefff;
+
+    line-height:1.6;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.prize-box h1{
+
+font-size:48px;
+
+}
+
+.time-box{
+
+width:120px;
+
+}
+
+.time-box h1{
+
+font-size:40px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.countdown .container{
+
+padding:20px;
+
+}
+
+.time-box{
+
+width:100%;
+
+}
+
+.prize-box{
+
+padding:30px;
+
+}
+
+.prize-box h1{
+
+font-size:36px;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+}/* ==========================================
+   TIMELINE
+========================================== */
+
+.timeline{
+
+    padding:90px 0;
+
+}
+
+.timeline h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    font-family:'Orbitron',sans-serif;
+
+    margin-bottom:50px;
+
+    color:#39c4ff;
+
+}
+
+.timeline-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.timeline-card{
+
+    background:rgba(5,18,45,.80);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(0,170,255,.25);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.timeline-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:5px;
+
+background:linear-gradient(90deg,#00aaff,#00ffee);
+
+}
+
+.timeline-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 30px rgba(0,180,255,.30);
+
+}
+
+.timeline-card h3{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+color:#38c2ff;
+
+}
+
+.timeline-card p{
+
+color:#dbefff;
+
+line-height:1.8;
+
+}
+
+/* ==========================================
+   SPONSOR
+========================================== */
+
+.sponsor{
+
+padding:90px 0;
+
+}
+
+.sponsor h2{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:40px;
+
+font-family:'Orbitron',sans-serif;
+
+color:#39c4ff;
+
+}
+
+.sponsor-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:25px;
+
+}
+
+.sponsor-grid div{
+
+height:120px;
+
+border-radius:18px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(0,170,255,.20);
+
+backdrop-filter:blur(20px);
+
+transition:.3s;
+
+font-weight:bold;
+
+font-size:18px;
+
+}
+
+.sponsor-grid div:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 20px rgba(0,170,255,.35);
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+margin-top:80px;
+
+background:#020b18;
+
+padding:60px 0 20px;
+
+border-top:1px solid rgba(0,170,255,.20);
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:50px;
+
+}
+
+.footer-grid img{
+
+width:90px;
+
+margin-bottom:20px;
+
+}
+
+.footer-grid h3{
+
+margin-bottom:18px;
+
+color:#39c4ff;
+
+}
+
+.footer-grid a{
+
+display:block;
+
+text-decoration:none;
+
+color:#dbefff;
+
+margin-bottom:10px;
+
+transition:.3s;
+
+}
+
+.footer-grid a:hover{
+
+color:#37bfff;
+
+padding-left:8px;
+
+}
+
+.social{
+
+display:flex;
+
+gap:15px;
+
+margin-top:10px;
+
+}
+
+.social a{
+
+width:45px;
+
+height:45px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+background:#0b3d87;
+
+font-size:20px;
+
+color:white;
+
+transition:.35s;
+
+}
+
+.social a:hover{
+
+background:#00aaff;
+
+transform:translateY(-5px);
+
+}
+
+.copyright{
+
+margin-top:40px;
+
+text-align:center;
+
+color:#8faecc;
+
+font-size:14px;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#061224;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#1aaeff;
+
+border-radius:20px;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:1s;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:900px){
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.social{
+
+justify-content:center;
+
+}
+
+.timeline h2,
+.sponsor h2{
+
+font-size:30px;
+
+}
+
+.timeline-card{
+
+padding:25px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.timeline{
+
+padding:60px 0;
+
+}
+
+.sponsor{
+
+padding:60px 0;
+
+}
+
+.timeline-card h3{
+
+font-size:22px;
+
+}
+
+.sponsor-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
